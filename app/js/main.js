@@ -1,33 +1,44 @@
 window.addEventListener('DOMContentLoaded', () => {
-  // * ===== Mask input
-  $('input[type="tel"]').mask('+7 (999) 999-99-99');
-  $('.input-data').mask('99-99-99');
-  $('.input-time').mask('99-99');
-
-  // * ===== Mixer
-  (function mixer() {
-    const mixContent = document.querySelector('.team__content');
-    if (mixContent) {
-      const mixer = mixitup(mixContent);
-    }
-  })();
-
-  // * ===== Custom select
-  (function customSelect() {
-    const selects = document.querySelectorAll('.select');
-    selects.forEach((el) => {
-      const select = new Choices(el, {
-        itemSelectText: '',
-        searchEnabled: false,
+  function carouselInstagram() {
+    // Initialise Carousel
+    const myCarousel = document.querySelector('.carousel');
+    if (myCarousel) {
+      const mainCarousel = new Carousel(myCarousel, {
+        infinite: false,
+        Navigation: false,
+        Dots: false,
+        center: true,
       });
-    });
-  })();
+
+      // Initialise Fancybox
+      Fancybox.bind('[data-fancybox="instagram"]', {
+        Carousel: {
+          on: {
+            change: (carousel, to) => {
+              const $el = Fancybox.getInstance()
+                .getSlide()
+                .$trigger.closest('.carousel__slide');
+
+              const slide = mainCarousel.slides.find((slide) => {
+                return slide.$el === $el;
+              });
+
+              mainCarousel.slideTo(slide.index, {
+                friction: 0,
+              });
+            },
+          },
+        },
+      });
+    }
+  }
+  carouselInstagram();
 
   (function rangeSliderSum() {
     const rangeSlider = document.querySelector(
       '.range-slider--sum .range-slider__range'
     );
-    const sliderValueSum = document.querySelector(
+    const sliderValue = document.querySelector(
       '.range-slider--sum .range-slider__value'
     );
     if (rangeSlider) {
@@ -56,7 +67,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const rangeSlider = document.querySelector(
       '.range-slider--time .range-slider__range'
     );
-    const sliderValueSum = document.querySelector(
+    const sliderValue = document.querySelector(
       '.range-slider--time .range-slider__value'
     );
 
@@ -86,7 +97,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const rangeSlider = document.querySelector(
       '.range-slider--percent .range-slider__range'
     );
-    const sliderValueSum = document.querySelector(
+    const sliderValue = document.querySelector(
       '.range-slider--percent .range-slider__value'
     );
     if (rangeSlider) {
@@ -112,6 +123,29 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   })();
 
+  // * ===== Mask input
+  $('input[type="tel"]').mask('+7 (999) 999-99-99');
+  $('.input-data').mask('99-99-99');
+  $('.input-time').mask('99-99');
+
+  // * ===== Custom select
+  (function customSelect() {
+    const selects = document.querySelectorAll('.select');
+    selects.forEach((el) => {
+      const select = new Choices(el, {
+        itemSelectText: '',
+        searchEnabled: false,
+      });
+    });
+  })();
+
+  // * ===== Mixer
+  (function mixer() {
+    const mixContent = document.querySelector('.team__content');
+    if (mixContent) {
+      const mixer = mixitup(mixContent);
+    }
+  })();
   // * ===== Slider
   (function sliderHero() {
     const sliderEl = document.querySelector('.hero__slider');
@@ -220,8 +254,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   toggleAccordion('.accordion__control', '.accordion__content', '.accordion');
 
-
-
   // // * ===== Modal
   // (function modals() {
   //   function bindModal(openBtn, modal, close) {
@@ -262,43 +294,43 @@ window.addEventListener('DOMContentLoaded', () => {
   //   bindModal('.get-presentation', '.popup--get-info', '.popup__close');
   //   bindModal('.presentation__download', '.popup--get-info', '.popup__close');
   // })();
+  // !
+  // function fancyBox() {
+  //   // Initialise Carousel
+  //   const myCarousel = document.querySelector('.carousel');
+  //   // if (myCarousel) {
+  //     const mainCarousel = new Carousel(document.querySelector('.carousel'), {
+  //       infinite: false,
+  //       Navigation: false,
+  //       Dots: false,
+  //       center: true,
+  //     });
 
-  function fancyBox() {
-    // Initialise Carousel
-    const myCarousel = document.querySelector('.carousel');
-    if (myCarousel) {
-      const mainCarousel = new Carousel(myCarousel, {
-        infinite: false,
-        Navigation: false,
-        Dots: false,
-        center: true,
-      });
+  //     // Initialise Fancybox
+  //     Fancybox.bind('[data-fancybox="instagram"]', {
+  //       Carousel: {
+  //         on: {
+  //           change: (carousel, to) => {
+  //             // Sync Carousel slide
+  //             // ===
+  //             const $el = Fancybox.getInstance()
+  //               .getSlide()
+  //               .$trigger.closest('.carousel__slide');
 
-      // Initialise Fancybox
-      Fancybox.bind('[data-fancybox="instagram"]', {
-        Carousel: {
-          on: {
-            change: (carousel, to) => {
-              // Sync Carousel slide
-              // ===
-              const $el = Fancybox.getInstance()
-                .getSlide()
-                .$trigger.closest('.carousel__slide');
+  //             const slide = mainCarousel.slides.find((slide) => {
+  //               return slide.$el === $el;
+  //             });
 
-              const slide = mainCarousel.slides.find((slide) => {
-                return slide.$el === $el;
-              });
-
-              mainCarousel.slideTo(slide.index, {
-                friction: 0,
-              });
-            },
-          },
-        },
-      });
-    }
-  }
-  fancyBox();
+  //             mainCarousel.slideTo(slide.index, {
+  //               friction: 0,
+  //             });
+  //           },
+  //         },
+  //       },
+  //     });
+  //   // }
+  // }
+  // fancyBox();
 
   // * ===== Toggle Tabs
   // function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
