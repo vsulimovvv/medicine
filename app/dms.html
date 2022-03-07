@@ -307,14 +307,12 @@
         <label class="form-request__label" for="sex">Укажите ваш пол</label>
         <select class="form-request__select select" name="sex" id="sex">
           <option value="1">Выберите из списка</option>
-          <option value="1">Выберите из списка</option>
-          <option value="1">Выберите из списка</option>
-          <option value="1">Выберите из списка</option>
-          <option value="1">Выберите из списка</option>
+          <option value="2">Мужчина</option>
+          <option value="3">Женщина</option>
         </select>
       </div>
       <div class="form-request__group">
-        <label class="form-request__label" for="age">Укажите ваш пол</label>
+        <label class="form-request__label" for="age">Укажите ваш возраст</label>
         <input
           class="form-request__input"
           type="text"
@@ -324,7 +322,9 @@
         />
       </div>
       <div class="form-request__group">
-        <label class="form-request__label" for="region">Укажите ваш пол</label>
+        <label class="form-request__label" for="region">
+          Укажите ваш регион
+        </label>
         <select class="form-request__select select" name="region" id="region">
           <option value="1">Выберите из списка</option>
           <option value="1">Выберите из списка</option>
@@ -334,7 +334,7 @@
         </select>
       </div>
       <div class="form-request__group">
-        <label class="form-request__label" for="city">Укажите ваш пол</label>
+        <label class="form-request__label" for="city">Укажите город</label>
         <select class="form-request__select select" name="city" id="city">
           <option value="1">Выберите из списка</option>
           <option value="1">Выберите из списка</option>
@@ -344,17 +344,19 @@
         </select>
       </div>
       <div class="form-request__group">
-        <label class="form-request__label" for="age">Укажите ваш пол</label>
+        <label class="form-request__label" for="name">Имя</label>
         <input
           class="form-request__input"
           type="text"
-          id="age"
+          id="name"
           placeholder="Введите Ваше имя"
           required
         />
       </div>
       <div class="form-request__group">
-        <label class="form-request__label" for="phone">Укажите ваш пол</label>
+        <label class="form-request__label" for="phone">
+          Контактный телефон
+        </label>
         <input
           class="form-request__input"
           type="tel"
@@ -708,6 +710,12 @@
 
 <!-- Choices JS -->
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
 
 <!-- JS -->
 <script src="js/main.min.js"></script>

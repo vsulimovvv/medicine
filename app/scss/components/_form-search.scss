@@ -1,6 +1,19 @@
 .form-search {
   width: 100%;
 
+  .choices {
+    background-color: transparent;
+    font-weight: 400;
+    color: #787878;
+
+    &__item {
+      font-size: 17px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+  }
   &__group {
     display: flex;
     width: 100%;
@@ -31,14 +44,10 @@
     align-items: center;
     min-width: 400px;
     justify-content: space-between;
+    gap: 20px;
+
     @include breakpointsMaxW($bp-768) {
       min-width: auto;
-    }
-  }
-
-  &__select {
-    @include breakpointsMaxW($bp-768) {
-      display: none;
     }
   }
 

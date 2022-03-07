@@ -1,5 +1,14 @@
 .price-list {
   @include adaptive-value('padding-bottom', 40, 30, 1);
+
+  .choices {
+    background-color: var(--color-white);
+    
+    &__item {
+      background-color: var(--color-white);
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;

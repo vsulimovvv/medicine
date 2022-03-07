@@ -1,4 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
+  // * ===== Mask input
+  $('input[type="tel"]').mask('+7 (999) 999-99-99');
+  $('.input-data').mask('99-99-99');
+  $('.input-time').mask('99-99');
+
   // * ===== Slider
   (function sliderHero() {
     const sliderEl = document.querySelector('.hero__slider');
@@ -70,16 +75,16 @@ window.addEventListener('DOMContentLoaded', () => {
   //   });
   // })();
 
-  // // * ===== Custom select
-  // (function customSelect() {
-  //   const selects = document.querySelectorAll('.select');
-  //   selects.forEach((el) => {
-  //     const select = new Choices(el, {
-  //       itemSelectText: '',
-  //       searchEnabled: false,
-  //     });
-  //   });
-  // })();
+  // * ===== Custom select
+  (function customSelect() {
+    const selects = document.querySelectorAll('.select');
+    selects.forEach((el) => {
+      const select = new Choices(el, {
+        itemSelectText: '',
+        searchEnabled: false,
+      });
+    });
+  })();
 
   // // * ===== Show Menu
   // (function showMenu() {

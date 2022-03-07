@@ -1,14 +1,14 @@
 .choices {
   font-size: 14px;
   line-height: 1.1;
-  height: 43px;
-  color: #727272;
+  height: 52px;
+  color: #787878;
+  font-weight: 400;
   opacity: 1;
   width: 100%;
-  margin-bottom: 20px !important;
   background-color: #ededed;
-  border-radius: 5px;
-  font-weight: 700;
+  border-radius: 10px;
+  margin-bottom: 0 !important;
 
   &__placeholder {
     opacity: 1;
@@ -19,7 +19,7 @@
     padding-left: 20px;
     width: 100%;
     height: 100%;
-    background-color: inherit;
+    background-color: inherit !important;
     display: flex;
     align-items: center;
     position: relative;
@@ -36,7 +36,7 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 100%;
-    background-color: var(--color-dark);
+    background-color: #787878;
 
     right: 15px !important;
     top: 20px !important;
@@ -53,12 +53,12 @@
 
   &__list {
     padding: 0;
-    background-color: var(--color-white);
+    background-color: inherit;
     max-height: 130px;
     overflow-y: auto;
 
     .choices__item {
-      background-color: #ededed;
+      background-color: inherit;
     }
 
     &--dropdown {
@@ -67,6 +67,7 @@
 
       .choices__list {
         max-height: 130px !important;
+        // border-color: var(--color-bg);
       }
 
       .choices__item {

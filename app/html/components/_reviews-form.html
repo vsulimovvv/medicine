@@ -2,87 +2,67 @@
   <div class="container">
     <h2 class="reviews-form__title section-title">Оставьте свой отзыв</h2>
 
-
-      <form
-        class="telemedicine-form__form form-request form-request--telemedicine"
-      >
-        <div class="form-request__group">
-          <label class="form-request__label" for="sex">Укажите ваш пол</label>
-          <select class="form-request__select select" name="sex" id="sex">
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-request__group">
-          <label class="form-request__label" for="age">Укажите ваш пол</label>
-          <input
-            class="form-request__input"
-            type="text"
-            id="age"
-            placeholder="Введите ваш возраст"
-            required
-          />
-        </div>
-        <div class="form-request__group">
-          <label class="form-request__label" for="region"
-            >Укажите ваш пол</label
-          >
-          <select class="form-request__select select" name="region" id="region">
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-request__group">
-          <label class="form-request__label" for="city">Укажите ваш пол</label>
-          <select class="form-request__select select" name="city" id="city">
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-            <option value="1">Выберите из списка</option>
-          </select>
-        </div>
-        <div class="form-request__group">
-          <label class="form-request__label" for="age">Укажите ваш пол</label>
-          <input
-            class="form-request__input"
-            type="text"
-            id="age"
-            placeholder="Введите Ваше имя"
-            required
-          />
-        </div>
-        <div class="form-request__group">
-          <label class="form-request__label" for="phone">Укажите ваш пол</label>
-          <input
-            class="form-request__input"
-            type="tel"
-            id="phone"
-            placeholder="+7 (___) ___ - __ - __"
-            required
-          />
-        </div>
-
-        <label class="checkbox checkbox">
-          <input class="checkbox__input" type="checkbox" />
-          <span class="checkbox__box"></span>
-          <span class="checkbox__text">
-            Отправляя заявку я соглашаюсь<a href="#">
-              обработку персональных данных
-            </a>
-          </span>
+    <form class="reviews-form__form form-request">
+      <div class="form-request__group">
+        <label class="form-request__label" for="sex">Имя</label>
+        <input
+          class="form-request__input"
+          type="text"
+          placeholder="Введите Ваше имя"
+          required
+        />
+      </div>
+      <div class="form-request__group">
+        <label class="form-request__label" for="age">Укажите услугу</label>
+        <select class="form-request__select select" name="region" id="region">
+          <option value="1">Выберите из списка</option>
+          <option value="1">Выберите из списка</option>
+          <option value="1">Выберите из списка</option>
+          <option value="1">Выберите из списка</option>
+          <option value="1">Выберите из списка</option>
+        </select>
+      </div>
+      <div class="form-request__group form-request__group--textarea">
+        <label class="form-request__label" for="region">Отзыв</label>
+        <textarea
+          class="form-request__input"
+          placeholder="Напишите текст отзыва"
+          required
+        ></textarea>
+      </div>
+      <div class="form-request__group">
+        <label class="form-request__label" for="file">Видео отзыв</label>
+        <label class="form-request__file">
+          <input class="form-request__input" type="file" id="file" />
+          Прикрепите ваше видео
         </label>
+      </div>
+      <div class="form-request__group">
+        <label class="form-request__label" style="opacity: 0" for="phone">
+          Укажите ваш пол
+        </label>
+        <input
+          class="form-request__input"
+          type="text"
+          id="age"
+          placeholder="Введите Ваше имя"
+          required
+        />
+      </div>
 
-        <button class="form-request__btn btn" type="submit">
-          Отправить заявку
-        </button>
-      </form>
-   
+      <label class="checkbox checkbox">
+        <input class="checkbox__input" type="checkbox" />
+        <span class="checkbox__box"></span>
+        <span class="checkbox__text">
+          Отправляя заявку я соглашаюсь<a href="#">
+            обработку персональных данных
+          </a>
+        </span>
+      </label>
+
+      <button class="form-request__btn btn" type="submit">
+        Отправить заявку
+      </button>
+    </form>
   </div>
 </section>
