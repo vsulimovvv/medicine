@@ -11,24 +11,20 @@
     <div class="site-wrapper">
       @include('./components/_header.html')
 
-      <!-- <div class="breadcrumbs breadcrumbs--left">
+      <div class="breadcrumbs">
         <div class="container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link" href="#">Главная</a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#"> Женщинам </a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
-            </li>
-            <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link">Пальто женское</a>
+              <a class="breadcrumbs__link breadcrumbs__link--active">
+                Лицензии
+              </a>
             </li>
           </ul>
         </div>
-      </div> -->
+      </div>
 
       <main class="main">
         @include('./components/_licenses.html')
@@ -36,7 +32,7 @@
       </main>
       @include('./components/_footer.html')
     </div>
-
+    <script src="js/tabs.js"></script>
     @include('./components/base/_scripts.html')
   </body>
 </html>

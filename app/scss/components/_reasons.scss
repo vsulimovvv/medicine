@@ -1,5 +1,9 @@
 .reasons {
   @include adaptive-value('padding-bottom', 90, 50, 1);
+  &__title {
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(2, auto);

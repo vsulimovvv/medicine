@@ -1,0 +1,26 @@
+.accordion {
+  padding-left: 1px;
+
+  &.active {
+    .accordion__control {
+      span {
+        &::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__control {
+    transition: 150ms ease;
+    position: relative;
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: 450ms ease-in;
+    z-index: 9;
+  }
+}

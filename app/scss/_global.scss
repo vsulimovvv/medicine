@@ -113,10 +113,15 @@ body {
   }
 }
 
-input[type="file"] {
+input[type='file'] {
   position: absolute;
   clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.mixitup-control-active {
+  color: var(--color-white) !important;
+  background-color: var(--color-accent) !important;
 }

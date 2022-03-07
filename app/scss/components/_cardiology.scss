@@ -160,19 +160,24 @@
     padding-left: 40px;
     position: relative;
 
-    &::after {
-      @include elDef();
-      width: 20px;
-      height: 20px;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: var(--color-dark);
-      @include maskImage(url('../images/content/destinations/1.svg'), contain);
-    }
-
+    &--active,
     &:hover {
       color: var(--color-accent);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: var(--color-dark);
     }
   }
 

@@ -19,10 +19,10 @@
           </select>
         </div>
         <div class="form-request__group">
-          <label class="form-request__label" for="age">
+          <label class="form-request__label" for="prof">
             Специальность врача
           </label>
-          <select class="form-request__select select">
+          <select class="form-request__select select" name="prof" id="prof">
             <option value="1">Выберите из списка</option>
             <option value="1">Выберите из списка</option>
             <option value="1">Выберите из списка</option>
@@ -31,41 +31,43 @@
           </select>
         </div>
         <div class="form-request__group">
-          <label class="form-request__label" for="region">
+          <label class="form-request__label" for="date">
             Дата консультации
           </label>
 
           <input
             class="form-request__input input-data"
             type="text"
+            id="date"
             placeholder="__-__-__"
           />
         </div>
         <div class="form-request__group">
-          <label class="form-request__label" for="region">
+          <label class="form-request__label" for="time">
             Время консультации
           </label>
 
           <input
             class="form-request__input input-time"
             type="text"
+            id="time"
             placeholder="__-__"
           />
         </div>
         <div class="form-request__group">
-          <label class="form-request__label" for="age">Имя</label>
+          <label class="form-request__label" for="name">Имя</label>
           <input
             class="form-request__input"
             type="text"
-            id="age"
+            id="name"
             placeholder="Введите Ваше имя"
             required
           />
         </div>
         <div class="form-request__group">
-          <label class="form-request__label" for="phone"
-            >Контактный телефон</label
-          >
+          <label class="form-request__label" for="phone">
+            Контактный телефон
+          </label>
           <input
             class="form-request__input"
             type="tel"

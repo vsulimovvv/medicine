@@ -4,17 +4,18 @@
 
     <form class="reviews-form__form form-request">
       <div class="form-request__group">
-        <label class="form-request__label" for="sex">Имя</label>
+        <label class="form-request__label" for="name">Имя</label>
         <input
           class="form-request__input"
           type="text"
+          id="name"
           placeholder="Введите Ваше имя"
           required
         />
       </div>
       <div class="form-request__group">
-        <label class="form-request__label" for="age">Укажите услугу</label>
-        <select class="form-request__select select" name="region" id="region">
+        <label class="form-request__label" for="service">Укажите услугу</label>
+        <select class="form-request__select select" name="service" id="service">
           <option value="1">Выберите из списка</option>
           <option value="1">Выберите из списка</option>
           <option value="1">Выберите из списка</option>
@@ -23,10 +24,11 @@
         </select>
       </div>
       <div class="form-request__group form-request__group--textarea">
-        <label class="form-request__label" for="region">Отзыв</label>
+        <label class="form-request__label" for="review">Отзыв</label>
         <textarea
           class="form-request__input"
           placeholder="Напишите текст отзыва"
+          id="review"
           required
         ></textarea>
       </div>
@@ -38,14 +40,18 @@
         </label>
       </div>
       <div class="form-request__group">
-        <label class="form-request__label" style="opacity: 0" for="phone">
-          Укажите ваш пол
+        <label
+          class="form-request__label"
+          style="opacity: 0; visibility: hidden"
+          for="review-video"
+        >
+          Ссылка на видел
         </label>
         <input
           class="form-request__input"
           type="text"
-          id="age"
-          placeholder="Введите Ваше имя"
+          id="review-video"
+          placeholder="Укажите ссылку на видео"
           required
         />
       </div>

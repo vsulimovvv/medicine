@@ -1,11 +1,7 @@
 .breadcrumbs {
-  @include adaptive-value('padding-top', 24, 15, 1);
-
-  display: flex;
-
-  &--left {
-    display: block;
-  }
+  @include adaptive-value('margin-bottom', 40, 25, 1);
+  margin-top: 20px;
+  display: block;
 
   &__list {
     display: flex;
@@ -27,8 +23,8 @@
         top: 50%;
         transform: translateY(-50%) rotate(-90deg);
         right: 0;
-        @include maskImage(url('../images/icons/chevron-down.svg'), contain);
-        background-color: #c2c2c2;
+        @include maskImage(url('../images/icons/chevron.svg'), contain);
+        background-color: var(--color-dark);
       }
     }
   }
@@ -38,10 +34,11 @@
     font-size: 14px;
     position: relative;
     transition: 150ms;
-    color: #c2c2c2;
+    color: var(--color-dark);
 
+    &--active,
     &:hover {
-      color: var(--color-text);
+      color: var(--color-accent);
     }
   }
 }

@@ -5,22 +5,86 @@
     <div class="calculator__wrapper">
       <form class="calculator__form form-calculator">
         <div class="form-calculator__group">
-          <label for="">Сумма услуги</label>
-          <input type="range" />
-        </div>
-        <div class="form-calculator__group">
-          <div class="filter-block__slider">
-            <p class="filter-block__slider-text filter-block__slider-text--sum">50000</p>
-            <div class="filter-block__inputs">
-              <label class="filter-block__label">
-                <input class="filter-block__input input-price" type="number" />
-              </label>
-            </div>
-            <div
-              class="filter-block__range range-slider range-slider--price"
-            ></div>
+          <span class="form-calculator__label">Сумма услуги</span>
+          <div class="range-slider range-slider--sum">
+            <span class="range-slider__value"></span>
+            <div class="range-slider__range"></div>
           </div>
         </div>
+        <div class="form-calculator__group">
+          <span class="form-calculator__label">Срок рассрочки</span>
+          <div class="range-slider range-slider--time">
+            <span class="range-slider__value"></span>
+            <div class="range-slider__range"></div>
+          </div>
+        </div>
+        <div class="form-calculator__group">
+          <span class="form-calculator__label">Процентная ставка</span>
+          <div class="range-slider range-slider--percent">
+            <span class="range-slider__value"></span>
+            <div class="range-slider__range"></div>
+          </div>
+        </div>
+        <div class="form-calculator__group">
+          <span class="form-calculator__label">Первоначальный взнос</span>
+          <input
+            class="form-calculator__input"
+            type="number"
+            id="initial"
+            placeholder="Введите сумму"
+            required
+          />
+        </div>
+
+        <div class="form-calculator__total">
+          <div class="form-calculator__per-month">
+            <p>
+              Платеж в месяц
+              <span class="form-calculator__price">
+                от 8 384 <span> ₽</span>
+              </span>
+            </p>
+          </div>
+          <div class="form-calculator__overpayment">
+            <p>
+              Переплата
+              <span class="form-calculator__price">1 021 <span> ₽</span></span>
+            </p>
+          </div>
+        </div>
+
+        <div class="form-calculator__group">
+          <span class="form-calculator__label">Имя</span>
+          <input
+            class="form-calculator__input"
+            type="text"
+            id="name"
+            placeholder="Введите ваше имя"
+            required
+          />
+        </div>
+        <div class="form-calculator__group">
+          <span class="form-calculator__label">Контактный телефон</span>
+          <input
+            class="form-calculator__input"
+            type="tel"
+            id="phone"
+            placeholder="+7 (___) ___ - __ - __"
+            required
+          />
+        </div>
+        <label class="checkbox">
+          <input class="checkbox__input" type="checkbox" />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text">
+            Отправляя заявку я соглашаюсь<a href="#">
+              обработку персональных данных
+            </a>
+          </span>
+        </label>
+        <button class="form-calculator__btn btn" type="submit">
+          Отправить заявку
+        </button>
       </form>
     </div>
   </div>
