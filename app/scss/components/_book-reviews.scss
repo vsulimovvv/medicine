@@ -1,0 +1,137 @@
+.book-reviews {
+  @include adaptive-value('padding-top', 80, 40, 1);
+  @include adaptive-value('padding-bottom', 80, 40, 1);
+
+  &__title {
+    @include adaptive-value('font-size', 30, 17, 1);
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptive-value('margin-bottom', 60, 35, 1);
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-576) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: calc(20px + (35 - 20) * ((100vw - 991px) / (1270 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 18px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+    }
+    @include breakpointsMaxW($bp-360) {
+    }
+  }
+
+  &__right {
+    display: flex;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    display: none;
+
+    &--video {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+
+    &.active {
+      display: grid;
+      animation: opacity-visibility 700ms ease forwards;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    justify-self: center;
+
+    @include breakpointsMaxW($bp-991) {
+      &:nth-child(n + 3) {
+        display: none;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    background-color: #eeeeee;
+    border-radius: 20px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eeeeee;
+    border-radius: 20px;
+    transition: 150ms ease;
+    @include adaptive-value('font-size', 16, 12, 1);
+    padding: 10px 15px;
+    color: var(--color-dark);
+
+    &--active,
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: calc(15px + (30 - 15) * ((100vw - 991px) / (1270 - 991)));
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 18px;
+    }
+    @include breakpointsMaxW($bp-360) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+    }
+  }
+
+  &__link {
+    font-family: $Exo2;
+    font-weight: 500;
+    @include adaptive-value('font-size', 16, 12, 1);
+  }
+}

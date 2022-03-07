@@ -1,0 +1,217 @@
+.cardiology {
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include adaptive-value('margin-bottom', 45, 25, 1);
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 0.37fr 1fr;
+    gap: 35px;
+
+    @include adaptive-value('margin-bottom', 60, 40, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__preview {
+    width: 100%;
+    @include adaptive-value('height', 350, 200, 1);
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+
+    img {
+      @include img(cover);
+      border-radius: 10px;
+    }
+  }
+
+  &__text {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+    p {
+      &:not(:last-child) {
+        @include adaptive-value('margin-bottom', 30, 15, 1);
+      }
+    }
+  }
+
+  &__heading {
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__list {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  &__item {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    gap: 30px;
+
+    &:nth-child(odd) {
+      background-color: var(--color-bg);
+    }
+  }
+
+  &__price {
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    &--big {
+      margin: 0 auto;
+      max-width: 300px;
+      display: block;
+      height: 60px;
+      border-radius: 10px;
+    }
+  }
+
+  &--commission {
+    .sidebar {
+      &__list {
+        height: auto;
+      }
+
+      &__link {
+        padding-left: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__head-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__price {
+    line-height: 1;
+    font-weight: 700;
+    color: #282828;
+    position: relative;
+    padding-left: 30px;
+    @include adaptive-value('font-size', 30, 20, 1);
+
+    &::after {
+      @include elDef();
+      width: 21px;
+      height: 21px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      @include maskImage(url('../images/icons/bookmark.svg'), contain);
+      background-color: var(--color-accent);
+    }
+  }
+}
+
+.sidebar {
+  @include breakpointsMaxW($bp-991) {
+    display: none;
+  }
+
+  &--notation {
+    .sidebar__list {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__list {
+    padding: 30px;
+    border: 1px solid #d5d5d5;
+    border-radius: 10px;
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--color-bg);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: #515151;
+    transition: 150ms ease;
+    padding: 12px 0;
+    padding-left: 40px;
+    position: relative;
+
+    &::after {
+      @include elDef();
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-dark);
+      @include maskImage(url('../images/content/destinations/1.svg'), contain);
+    }
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__notation {
+    background-color: var(--color-bg);
+    padding: 30px;
+    color: #515151;
+    border-radius: 10px;
+  }
+
+  &__heading {
+    font-size: 17px;
+    font-weight: 700;
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__notes {
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__note {
+    position: relative;
+    padding-left: 12px;
+
+    &::after {
+      @include elDef();
+      width: 5px;
+      height: 5px;
+      background-color: #515151;
+      top: 6px;
+      left: 0;
+      border-radius: 50%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,69 @@
+.form-request {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @include adaptive-value('gap', 40, 20, 1);
+
+  @include breakpointsMaxW($bp-768) {
+    grid-template-columns: 1fr;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    @include adaptive-value('gap', 15, 10, 1);
+  }
+
+  &__label {
+    font-size: 17px;
+    color: #282828;
+  }
+
+  &__input {
+    display: block;
+    border-radius: 10px;
+    width: 100%;
+    height: 52px;
+    background-color: var(--color-bg);
+    font-size: 17px;
+    padding: 20px 23px;
+
+    &::placeholder {
+      color: #7d7d7d;
+    }
+  }
+
+  &__btn {
+    grid-column: 1/-1;
+    justify-self: center;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .checkbox {
+    grid-column: 1/-1;
+
+    &__text {
+    
+
+      @include breakpointsMaxW($bp-768) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &--telemedicine {
+    .form-request {
+      &__label {
+        color: var(--color-white);
+      }
+
+      &__btn {
+        grid-column: initial;
+        height: 57px;
+      }
+    }
+  }
+}

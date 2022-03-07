@@ -1,0 +1,52 @@
+.question {
+  background-image: url('../images/content/question-bg.jpg');
+  @include background(cover);
+  background-color: var(--color-bg);
+
+  @include breakpointsMaxW($bp-768) {
+    background-image: none;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    @include adaptive-value('font-size', 40, 25, 1);
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    color: #737373;
+    @include adaptive-value('margin-bottom', 40, 20, 1);
+    @include adaptive-value('font-size', 17, 15, 1);
+    @include breakpointsMaxW($bp-768) {
+      text-align: center;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    @include adaptive-value('min-height', 700, 520, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      align-items: center;
+    }
+  }
+
+  &__offer {
+    max-width: 500px;
+  }
+
+  &__form {
+    max-width: 422px;
+    width: 100%;
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 100%;
+    }
+  }
+}

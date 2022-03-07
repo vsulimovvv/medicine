@@ -1,0 +1,23 @@
+// Color
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+
+  --color-dark: #373737;
+  --color-gray: #595959;
+  --color-bg: #f0f0f0;
+  --color-accent: #ecc26d; // rgba(236, 194, 109, 1)
+  --color-blue: #82a3c2;
+}
+
+// * breakpointsMaxW
+$bp-container: 1270px;
+$bp-991: 991.98px;
+$bp-768: 767.98px;
+$bp-576: 576px;
+$bp-375: 375.98px;
+$bp-360: 361px;
+
+// *=== Fonts
+$TTCommons: 'TT Commons';
+$Exo2: 'Exo 2';

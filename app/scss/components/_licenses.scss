@@ -1,0 +1,95 @@
+.licenses {
+  @include adaptive-value('padding-bottom', 50, 30, 1);
+  &__title {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+  }
+
+  &__item {
+    height: 100%;
+    justify-self: center;
+  }
+}
+
+.licenses-card {
+  position: relative;
+  height: 100%;
+  max-width: 295px;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+
+  &:hover {
+    &::after {
+      opacity: 1;
+      visibility: visible;
+    }
+    .licenses-card {
+      &__btn {
+        opacity: 1;
+        visibility: visible;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    @include adaptive-value('height', 430, 240, 1);
+
+    img {
+      @include img(cover);
+    }
+  }
+
+  &::after {
+    @include elDef();
+    background-color: rgba(236, 194, 109, 0.7);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 250ms ease;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    z-index: 1;
+    gap: 16px;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 250ms ease;
+    transition-delay: 250ms;
+
+    svg {
+      fill: var(--color-white);
+    }
+  }
+}

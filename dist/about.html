@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.min.css" />
+
+
+    <title>Medicine</title>
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <header class="header">
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-wrap">
+        <a class="header__navigation" href="#">
+          Петрозаводск, ул.Торнева, д.13
+        </a>
+
+        <a class="header__version" href="#">Версия для слабовидящих</a>
+
+        <div class="header__right">
+          <div class="header__socials socials">
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a class="socials__link socials__link--vk" href="#"></a>
+              </li>
+              <li class="socials__item">
+                <a class="socials__link socials__link--instagram" href="#"></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="header__send">
+            <a class="header__mail" href="mailto:szmclinic@gmail.com">
+              szmclinic@gmail.com
+            </a>
+            <a class="header__link" href="#">напишите нам</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header__middle">
+    <div class="container">
+      <div class="header__middle-wrap">
+        <button class="header__toggle" type="button" aria-label="Открыть меню">
+          <span class="header__toggle-line"></span>
+        </button>
+        <a class="header__logo logo" href="index.html">
+          <picture>
+            <source srcset="images/logo-small.png" media="(max-width: 991px)" />
+            <img src="images/logo.png" alt="Логотип" />
+          </picture>
+        </a>
+
+        <form class="header__search search-block">
+          <input
+            class="search-block__input"
+            type="text"
+            placeholder="Быстрый поиск услуг"
+          />
+        </form>
+
+        <a class="header__phone" href="tel:+88142260303">8 (8142) 26 03 03</a>
+
+        <div class="header__tools">
+          <a class="header__private btn btn--transparent" href="#">
+            Личный кабинет
+          </a>
+          <button class="btn" type="button">Онлай - запись</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="header__bottom">
+    <div class="container">
+      <div class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">Направления</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"> Зимняя коллекция </a>
+
+                  <div class="submenu">
+                    <ul class="submenu__list">
+                      <li class="submenu__item">
+                        <a class="dropmenu__link" href="#">Пальто</a>
+                      </li>
+                      <li class="submenu__item">
+                        <a class="dropmenu__link" href="#">Куртки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Зимняя коллекция</a>
+
+                  <div class="submenu submenu--cats">
+                    <ul class="submenu__list">
+                      <li class="submenu__item">
+                        <a class="dropmenu__link" href="#">Пальто</a>
+                      </li>
+                      <li class="submenu__item">
+                        <a class="dropmenu__link" href="#">Куртки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Персонал</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">ДМС</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Телемедицина</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Прайс-лист</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Прайс-лист</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#"
+              >Медицинские комиссии</a
+            >
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"> Зимняя коллекция </a>
+
+                  <div class="submenu">
+                    <ul class="submenu__list">
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Пальто</a>
+                      </li>
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Куртки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Зимняя коллекция</a>
+
+                  <div class="submenu submenu">
+                    <ul class="submenu__list">
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Пальто</a>
+                      </li>
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Куртки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--dropdown" href="#">О клинике</a>
+
+            <div class="dropmenu">
+              <ul class="dropmenu__list">
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#"> Зимняя коллекция </a>
+
+                  <div class="submenu">
+                    <ul class="submenu__list">
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Пальто</a>
+                      </li>
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Куртки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropmenu__item">
+                  <a class="dropmenu__link" href="#">Зимняя коллекция</a>
+
+                  <div class="submenu submenu">
+                    <ul class="submenu__list">
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Пальто</a>
+                      </li>
+                      <li class="submenu__item">
+                        <a class="submenu__link" href="#">Куртки</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Калькулятор рассрочки</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+      <!-- <div class="breadcrumbs breadcrumbs--left">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#"> Женщинам </a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="#">Зимняя коллекция</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link">Пальто женское</a>
+            </li>
+          </ul>
+        </div>
+      </div> -->
+
+      <main class="main">
+        <section class="advantages">
+  <h2 class="visually-hidden">Преимущества</h2>
+  <div class="container">
+    <div class="advantages__preview">
+      <img src="images/content/about/1.jpg" alt="О нас" />
+    </div>
+
+    <ul class="advantages__list">
+      <li class="advantages__item advantages__item--individual">
+        <div class="advantages__img"></div>
+        <h3 class="advantages__heading">Индивидуальный подход</h3>
+        <div class="advantages__text">
+          <p>
+            к каждому пациенту, учитывающий состояние его здоровья и
+            психологические особенности
+          </p>
+        </div>
+      </li>
+      <li class="advantages__item advantages__item--professionalism">
+        <div class="advantages__img"></div>
+        <h3 class="advantages__heading">Профессионализм</h3>
+        <div class="advantages__text">
+          <p>
+            специалисты с высокой репутацией и безупречным опытом работы в
+            различных сферах медицины
+          </p>
+        </div>
+      </li>
+      <li class="advantages__item advantages__item--complex">
+        <div class="advantages__img"></div>
+        <h3 class="advantages__heading">Комплексный подход</h3>
+        <div class="advantages__text">
+          <p>
+            врачи разных областей медицины находятся в постоянном взаимодействии
+            друг с другом
+          </p>
+        </div>
+      </li>
+      <li class="advantages__item advantages__item--innovation">
+        <div class="advantages__img"></div>
+        <h3 class="advantages__heading">Инновации</h3>
+        <div class="advantages__text">
+          <p>
+            врачи регулярно усовершенствуют свои навыки и знания, изучая новые
+            передовые методы диагностики и лечения
+          </p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+        <section class="descr">
+  <div class="container">
+    <div class="descr__wrapper">
+      <div class="descr__offer">
+        <h2 class="descr__title section-title">
+          Северо-Западная <br />
+          Медицинская Клиника <span>— это</span>
+        </h2>
+        <p class="descr__undertitle">
+          молодая, современная, инновационная, многопрофильная клиника
+        </p>
+
+        <div class="descr__text">
+          <p>
+            Здесь работают врачи высшей категории с большим опытом в медицине. В
+            лечении болезней здесь пользуются передовыми технологиями.
+          </p>
+          <p>
+            В Клинике вы найдете более 10 направлений медицинской помощи. Свыше
+            2000 видов анализов. УЗИ. ЭКГ. Можете пройти водительскую комиссию и
+            профосмотр.
+          </p>
+          <p>
+            Мы гордимся тем, что наша команда – коллектив профессионалов
+            высокого уровня. Мы знаем грамотное решение Вашей проблемы.
+          </p>
+        </div>
+      </div>
+      <div class="descr__preview">
+        <img src="images/content/descr-bg.jpg" alt="О нас" />
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section class="reviews-video" id="reviews">
+  <div class="container">
+    <div class="reviews-video__top">
+      <h2 class="reviews-video__title section-title">Видео - отзывы</h2>
+
+      <a class="reviews-video__btn btn" href="#">Все отзывы</a>
+    </div>
+
+    <div class="reviews-video__slider swiper">
+      <ul class="reviews-video__slides swiper-wrapper">
+        <li class="reviews-video__slide swiper-slide">
+          <div class="reviews-video-card">
+            <a
+              class="reviews-video-card__link"
+              data-fancybox="responsive"
+              data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s"
+            >
+              <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#play"></use>
+              </svg>
+            </a>
+
+            <div class="reviews-video-card__img">
+              <img src="images/content/reviews-video/1.jpg" alt="Иван Иванов" />
+            </div>
+          </div>
+        </li>
+        <li class="reviews-video__slide swiper-slide">
+          <div class="reviews-video-card">
+            <a
+              class="reviews-video-card__link"
+              data-fancybox="responsive"
+              data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s"
+            >
+              <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#play"></use>
+              </svg>
+            </a>
+
+            <div class="reviews-video-card__img">
+              <img src="images/content/reviews-video/2.jpg" alt="Иван Иванов" />
+            </div>
+          </div>
+        </li>
+        <li class="reviews-video__slide swiper-slide">
+          <div class="reviews-video-card">
+            <a
+              class="reviews-video-card__link"
+              data-fancybox="responsive"
+              data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s"
+            >
+              <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#play"></use>
+              </svg>
+            </a>
+
+            <div class="reviews-video-card__img">
+              <img src="images/content/reviews-video/1.jpg" alt="Иван Иванов" />
+            </div>
+          </div>
+        </li>
+        <li class="reviews-video__slide swiper-slide">
+          <div class="reviews-video-card">
+            <a
+              class="reviews-video-card__link"
+              data-fancybox="responsive"
+              data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s"
+            >
+              <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#play"></use>
+              </svg>
+            </a>
+
+            <div class="reviews-video-card__img">
+              <img src="images/content/reviews-video/2.jpg" alt="Иван Иванов" />
+            </div>
+          </div>
+        </li>
+        <li class="reviews-video__slide swiper-slide">
+          <div class="reviews-video-card">
+            <a
+              class="reviews-video-card__link"
+              data-fancybox="responsive"
+              data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s"
+            >
+              <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#play"></use>
+              </svg>
+            </a>
+
+            <div class="reviews-video-card__img">
+              <img src="images/content/reviews-video/1.jpg" alt="Иван Иванов" />
+            </div>
+          </div>
+        </li>
+        <li class="reviews-video__slide swiper-slide">
+          <div class="reviews-video-card">
+            <a
+              class="reviews-video-card__link"
+              data-fancybox="responsive"
+              data-src="https://www.youtube.com/watch?v=FmrGz8qSyrk&t=540s"
+            >
+              <svg width="20" height="20">
+                <use xlink:href="images/sprite.svg#play"></use>
+              </svg>
+            </a>
+
+            <div class="reviews-video-card__img">
+              <img src="images/content/reviews-video/2.jpg" alt="Иван Иванов" />
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button
+        class="swiper-button-next"
+        type="button"
+        aria-label="Следующий"
+      ></button>
+      <button
+        class="swiper-button-prev"
+        type="button"
+        aria-label="Прелыдущий"
+      ></button>
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
+</section>
+
+        <section class="instagram">
+  <div class="container container--1600">
+    <h2 class="instagram__title section-title">Наш instagram</h2>
+
+    <div class="instagram__content">
+      <ul class="instagram__list carousel">
+        <li class="instagram__item carousel__slide">
+          <a
+            class=""
+            data-fancybox="instagram"
+            data-src="images/content/instagram/1.jpg"
+            href="#"
+          >
+            <img src="images/content/instagram/1.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+        <li class="instagram__item carousel__slide">
+          <a
+            data-fancybox="instagram"
+            data-src="images/content/instagram/2.jpg"
+            href="#"
+          >
+            <img src="images/content/instagram/2.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+        <li class="instagram__item carousel__slide">
+          <a
+            data-fancybox="instagram"
+            data-src="images/content/instagram/3.jpg"
+            href="#"
+          >
+            <img src="images/content/instagram/3.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+        <li class="instagram__item carousel__slide">
+          <a
+            data-fancybox="instagram"
+            data-src="images/content/instagram/4.jpg"
+            href="#"
+            data-fancybox-group="instagram"
+          >
+            <img src="images/content/instagram/4.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+        <li class="instagram__item carousel__slide">
+          <a
+            data-fancybox="instagram"
+            data-src="images/content/instagram/5.jpg"
+            href="#"
+            data-fancybox-group="instagram"
+          >
+            <img src="images/content/instagram/5.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+        <li class="instagram__item carousel__slide">
+          <a
+            data-fancybox="instagram"
+            data-src="images/content/instagram/6.jpg"
+            href="#"
+          >
+            <img src="images/content/instagram/6.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+        <li class="instagram__item carousel__slide">
+          <a
+            data-fancybox="instagram"
+            data-src="images/content/instagram/7.jpg"
+            href="#"
+          >
+            <img src="images/content/instagram/7.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+        <li class="instagram__item carousel__slide">
+          <a
+            data-fancybox="instagram"
+            data-src="images/content/instagram/8.jpg"
+            href="#"
+          >
+            <img src="images/content/instagram/8.jpg" alt="Инстаграм" />
+          </a>
+        </li>
+      </ul>
+
+      <a class="instagram__btn btn" href="#">Подписаться</a>
+    </div>
+  </div>
+</section>
+
+        <section class="contacts" id="contacts">
+  <div class="container">
+    <div class="contacts__top">
+      <h2 class="contacts__title section-title">
+        <span class="section-title__underline">Свяжитесь с нами</span>
+      </h2>
+    </div>
+    <ul class="contacts__list">
+      <li class="contacts__item">
+        <a class="contacts__link contacts__link--phone" href="tel:+78142260303">
+          <span class="contacts__icon"></span>
+          <small class="contacts__name">телефон/факс:</small>
+          <span>8 (8142) 26 03 03</span>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <div class="contacts__link contacts__link--location" href="#">
+          <span class="contacts__icon"></span>
+          <small class="contacts__name">адрес:</small>
+          <span>Петрозаводск, ул.Торнева, д. 13</span>
+        </div>
+      </li>
+      <li class="contacts__item">
+        <a
+          class="contacts__link contacts__link--mail"
+          href="mailto:szmclinic@gmail.com"
+        >
+          <span class="contacts__icon"></span>
+          <small class="contacts__name">e-mail:</small>
+          <span>szmclinic@gmail.com</span>
+        </a>
+      </li>
+      <li class="contacts__item">
+        <button
+          class="contacts__button btn btn--transparent btn-call"
+          type="button"
+        >
+          Онлайн - запись
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="contacts__map map">
+    <iframe
+      src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac90662ff09bbe1f51ccfe7ced908b812be64f67eff10a15c9b592dbd86426726&amp;source=constructor"
+      width="1920"
+      height="472"
+    ></iframe>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__col">
+        <a class="footer__logo logo" href="index.html">
+          <img src="images/logo.png" alt="Логотип" />
+        </a>
+        <div class="footer__socials socials">
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vk" href="#"></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--instagram" href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__actions">
+          <a href="#">
+            <img
+              src="images/content/google-play.png"
+              alt="Скачать в google play"
+            />
+          </a>
+          <a href="#">
+            <img src="images/content/app-store.png" alt="Скачать в app store"
+          /></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Направления</span>
+        <div class="footer__lists">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Проктология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Гинекология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Урология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Пульмонология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Хирургия</a>
+            </li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Аллергология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Отоларингология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Офтальмология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Онкология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Кардиология</a>
+            </li>
+          </ul>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">Дерматология</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Терапия</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">УЗИ диагностика</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Анализы</a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">Флебология</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Комиссия</span>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">Водительская комиссия А, В</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Водительская комиссия C, D, E</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#"> Оружейная комиссия</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#"> Профосмотр</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <span class="footer__heading">Клиника</span>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a class="footer__link" href="#">О клинике</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Персонал</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Прайс - лист</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Лицензии</a>
+          </li>
+          <li class="footer__item">
+            <a class="footer__link" href="#">Книга отзывов</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2018 Cеверо-западная Медицинская Клиника</p>
+      <div class="footer__right">
+        <a href="tel:+78142260303"> 8 (8142) 26 03 03 </a>
+        <a href="mailto:szmclinic@gmail.com">szmclinic@gmail.com</a>
+        <p>Петрозаводск, ул.Торнева, д.13</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- FancyBox -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+/>
+
+<!-- FancyBox -->
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

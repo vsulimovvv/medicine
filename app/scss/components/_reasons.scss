@@ -1,0 +1,99 @@
+.reasons {
+  @include adaptive-value('padding-bottom', 90, 50, 1);
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    @include adaptive-value('gap', 50, 40, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    max-width: 520px;
+    width: 100%;
+
+    @include breakpointsMaxW($bp-768) {
+      max-width: 100%;
+    }
+
+    &:nth-child(1) {
+      .reasons__top {
+        &::after {
+          @include maskImage(url('../images/content/reasons/1.svg'), contain);
+        }
+      }
+    }
+    &:nth-child(2) {
+      .reasons__top {
+        &::after {
+          @include maskImage(url('../images/content/reasons/2.svg'), contain);
+        }
+      }
+    }
+    &:nth-child(3) {
+      .reasons__top {
+        &::after {
+          @include maskImage(url('../images/content/reasons/3.svg'), contain);
+        }
+      }
+    }
+    &:nth-child(4) {
+      .reasons__top {
+        &::after {
+          @include maskImage(url('../images/content/reasons/4.svg'), contain);
+        }
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+    min-height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include adaptive-value('padding-left', 80, 60, 1);
+
+    &::after {
+      @include elDef();
+      width: 51px;
+      height: 51px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      background-color: var(--color-accent);
+      @include adaptive-value('width', 51, 41, 1);
+      @include adaptive-value('height', 51, 41, 1);
+    }
+
+    @include adaptive-value('margin-bottom', 40, 25, 1);
+  }
+
+  &__heading {
+    @include adaptive-value('font-size', 25, 18, 1);
+    font-weight: 500;
+    color: #363636;
+  }
+
+  &__cause {
+    padding-left: 12px;
+    position: relative;
+    @include adaptive-value('font-size', 17, 15, 1);
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &::after {
+      @include elDef();
+      width: 4px;
+      height: 4px;
+      top: 8px;
+      left: 0;
+      background-color: var(--color-dark);
+      border-radius: 50%;
+    }
+  }
+}

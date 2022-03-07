@@ -1,0 +1,111 @@
+.footer {
+  padding-top: 35px;
+
+  &__top {
+    display: grid;
+    grid-template-columns:
+      minmax(auto, 255px) auto minmax(auto, 200px)
+      minmax(auto, 100px);
+    border-bottom: 1px solid var(--color-bg);
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, auto);
+    }
+    // ! Заменить. Будет другой футер
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__col {
+    &:first-child {
+      @include breakpointsMaxW($bp-991) {
+        grid-template-columns: repeat(4, auto);
+        grid-column: 1/-1;
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    @include adaptive-value('margin-bottom', 55, 35, 1);
+  }
+
+  &__heading {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    @include adaptive-value('margin-bottom', 55, 35, 1);
+  }
+
+  &__lists {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    width: 100%;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: calc(25px + (70 - 25) * ((100vw - 991px) / (1270 - 991)));
+    }
+    @include breakpointsMaxW($bp-991) {
+      gap: 40px;
+    }
+    // ! Заменить. Будет другой футер
+    @include breakpointsMaxW($bp-768) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__link {
+    font-size: 15px;
+    color: #7b7b7b;
+    transition: 150ms ease;
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+
+  &__socials {
+    margin-bottom: 27px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    color: #4d4d4d;
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    @include breakpointsMaxW($bp-991) {
+      order: -1;
+    }
+  }
+}

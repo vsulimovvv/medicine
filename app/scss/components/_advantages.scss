@@ -1,0 +1,111 @@
+.advantages {
+  @include adaptive-value('padding-top', 30, 20, 1);
+
+  &__preview {
+    width: 100%;
+    @include adaptive-value('height', 435, 150, 1);
+    @include adaptive-value('margin-bottom', 70, 40, 1);
+
+    img {
+      @include img(cover);
+      border-radius: 10px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 280px));
+    justify-content: space-between;
+    gap: 20px;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, minmax(auto, 280px));
+      justify-content: center;
+    }
+    @include breakpointsMaxW($bp-360) {
+      grid-template-columns: minmax(auto, 280px);
+    }
+  }
+
+  &__heading {
+    margin-bottom: 15px;
+  }
+
+  &__item {
+    padding-top: 130px;
+    text-align: center;
+    position: relative;
+
+    &--individual {
+      .advantages__img {
+        &::after {
+          @include maskImage(
+            url('../images/content/advantages/1.svg'),
+            contain
+          );
+        }
+      }
+    }
+    &--professionalism {
+      .advantages__img {
+        &::after {
+          width: 41px;
+          height: 41px;
+          @include maskImage(
+            url('../images/content/advantages/2.svg'),
+            contain
+          );
+        }
+      }
+    }
+    &--complex {
+      .advantages__img {
+        &::after {
+          width: 41px;
+          height: 41px;
+          @include maskImage(
+            url('../images/content/advantages/3.svg'),
+            contain
+          );
+        }
+      }
+    }
+    &--innovation {
+      .advantages__img {
+        &::after {
+          width: 46px;
+          height: 46px;
+          @include maskImage(
+            url('../images/content/advantages/4.svg'),
+            contain
+          );
+        }
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff8ea;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+
+    &::after {
+      @include elDef();
+      width: 51px;
+      height: 51px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__text {
+    @include adaptive-value('font-size', 16, 13, 1);
+  }
+}

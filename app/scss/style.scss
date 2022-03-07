@@ -1,0 +1,55 @@
+@import 'libs';
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
+
+@import './animations';
+
+// * ===== Other components
+@import './components/breadcrumbs';
+@import './components/socials';
+@import './components/menu';
+@import './components/swiper-utils';
+@import './components/form-search';
+@import './components/form-submit';
+@import './components/form-request';
+@import './components/custom-checkbox';
+@import './components/custom-select';
+
+// * ===== Card Components
+@import './components/card-reviews';
+@import './components/card-reviews-video';
+@import './components/card-news';
+@import './components/card-team';
+
+// * ===== Section Components
+@import './components/footer';
+@import './components/header';
+@import './components/contacts';
+@import './components/reviews-video';
+@import './components/reviews';
+@import './components/advantages';
+@import './components/about';
+@import './components/commission';
+@import './components/search';
+@import './components/destinations';
+@import './components/hero';
+@import './components/question';
+@import './components/news';
+@import './components/cardiology';
+@import './components/team';
+@import './components/dms';
+@import './components/request';
+@import './components/licenses';
+@import './components/book-reviews';
+@import './components/form-reviews';
+@import './components/price-list';
+@import './components/descr';
+@import './components/contacts-info';
+@import './components/contacts-page';
+@import './components/reasons';
+@import './components/telemedicine-form';
+@import './components/calculator';
+@import './components/instagram';

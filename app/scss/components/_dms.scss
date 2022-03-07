@@ -1,0 +1,55 @@
+.hero-dms {
+  &__wrapper {
+    width: 100%;
+    background-image: url('../images/content/dms-bg.jpg');
+    @include background(cover);
+    background-color: var(--color-bg);
+
+    @include adaptive-value('padding-top', 90, 30, 1);
+    @include adaptive-value('padding-bottom', 90, 30, 1);
+    @include adaptive-value('padding-left', 70, 30, 1);
+    @include adaptive-value('padding-right', 70, 30, 1);
+
+    @include adaptive-value('min-height', 435, 335, 1);
+
+    @include adaptive-value('margin-bottom', 60, 30, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      background-image: none;
+    }
+  }
+
+  &--telemedicine {
+    .hero-dms__wrapper {
+      background-image: url('../images/content/telemedicine/bg.jpg');
+      @include background(cover);
+      color: var(--color-white);
+    }
+    .hero-dms__text {
+      color: var(--color-white);
+    }
+  }
+
+  &__offer {
+    max-width: 490px;
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #535353;
+    @include adaptive-value('margin-bottom', 40, 20, 1);
+    max-width: 430px;
+  }
+
+  &__descr {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

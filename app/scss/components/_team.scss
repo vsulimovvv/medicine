@@ -1,0 +1,65 @@
+.team {
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+    @include adaptive-value('margin-bottom', 45, 30, 1);
+    @include adaptive-value('gap', 65, 30, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__actions {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 40px;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(3, auto);
+      margin: 0 auto;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    font-size: 17px;
+    padding: 7px 15px;
+    border-radius: 10px;
+    color: var(--color-dark);
+    background-color: transparent;
+    transition: 150ms ease;
+
+    &--active,
+    &:hover {
+      color: var(--color-white);
+      background-color: var(--color-accent);
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    @include breakpointsMaxW($bp-container) {
+      gap: 15px;
+    }
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpointsMaxW($bp-360) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    justify-self: center;
+    height: 100%;
+  }
+}

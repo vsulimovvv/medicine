@@ -1,0 +1,51 @@
+.form-search {
+  width: 100%;
+
+  &__group {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    position: relative;
+  }
+
+  &__input {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    width: 100%;
+    padding: 25px;
+    font-size: 19px;
+    height: 100%;
+    padding-right: 420px;
+    @include breakpointsMaxW($bp-768) {
+      padding-right: 125px;
+    }
+  }
+
+  &__actions {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-width: 400px;
+    justify-content: space-between;
+    @include breakpointsMaxW($bp-768) {
+      min-width: auto;
+    }
+  }
+
+  &__select {
+    @include breakpointsMaxW($bp-768) {
+      display: none;
+    }
+  }
+
+  &__btn {
+    height: 100%;
+    max-width: 185px;
+    width: 100%;
+    flex-shrink: 0;
+  }
+}

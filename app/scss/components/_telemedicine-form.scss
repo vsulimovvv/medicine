@@ -1,0 +1,24 @@
+.telemedicine-form {
+  background-image: url('../images/content/telemedicine/bg-form.jpg');
+  @include background(cover);
+  @include adaptive-value('padding-top', 80, 40, 1);
+  background-color: var(--color-blue);
+
+  @include breakpointsMaxW($bp-768) {
+    background-image: none;
+  }
+
+  &__wrapper {
+    min-height: 710px;
+  }
+
+  &__title {
+    @include adaptive-value('margin-bottom', 50, 30, 1);
+    color: var(--color-white);
+  }
+
+  &__form {
+    max-width: 760px;
+    width: 100%;
+  }
+}

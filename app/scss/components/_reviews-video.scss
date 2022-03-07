@@ -1,0 +1,52 @@
+.reviews-video {
+  @include adaptive-value('padding-top', 70, 40, 1);
+  background-color: var(--color-bg);
+
+  &__top {
+    @include adaptive-value('margin-bottom', 48, 28, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include breakpointsMaxW($bp-360) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__btn {
+    border-radius: 10px;
+    position: relative;
+    padding-right: 50px;
+    @include adaptive-value('font-size', 18, 14, 1);
+
+    &:hover {
+      &::after {
+        background-color: var(--color-accent);
+      }
+    }
+
+    &::after {
+      @include elDef();
+      width: 24px;
+      height: 16px;
+      top: 50%;
+      right: 18px;
+      transform: translateY(-50%);
+      @include maskImage(url('../images/icons/arrow-right.svg'), contain);
+      background-color: var(--color-white);
+      transition: 150ms ease;
+    }
+  }
+
+  &__slider {
+    @include adaptive-value('padding-bottom', 70, 40, 1);
+  }
+
+  &__slide {
+    max-width: 610px;
+    width: 100%;
+  }
+}
