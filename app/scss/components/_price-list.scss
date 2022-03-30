@@ -3,7 +3,7 @@
 
   .choices {
     background-color: var(--color-white);
-    
+
     &__item {
       background-color: var(--color-white);
     }
@@ -75,7 +75,7 @@
     @include adaptive-value('padding-top', 28, 15, 1);
     @include adaptive-value('padding-bottom', 28, 15, 1);
     @include adaptive-value('padding-left', 22, 12, 1);
-    @include adaptive-value('padding-right', 22, 12, 1);
+    @include adaptive-value('padding-right', 40, 22, 1);
     &:nth-child(odd) {
       background-color: var(--color-bg);
     }
@@ -85,7 +85,7 @@
     background-color: var(--color-accent);
     color: var(--color-white);
     text-transform: uppercase;
-    padding: 22px 28px;
+    padding: 22px 40px 22px 28px;
     font-size: 19px;
     font-weight: 700;
     border-radius: 10px 10px 0px 0px;
@@ -99,7 +99,7 @@
     @include adaptive-value('padding-top', 28, 15, 1);
     @include adaptive-value('padding-bottom', 28, 15, 1);
     @include adaptive-value('padding-left', 22, 12, 1);
-    @include adaptive-value('padding-right', 22, 12, 1);
+    @include adaptive-value('padding-right', 40, 22, 1);
   }
 
   &__price {
@@ -107,10 +107,13 @@
     flex-shrink: 0;
   }
 
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   &__btn {
-    max-width: 300px;
-    width: 100%;
     display: block;
-    margin: 0 auto;
   }
 }

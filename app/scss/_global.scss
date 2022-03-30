@@ -1,7 +1,7 @@
 body {
   font-family: $TTCommons;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
   color: var(--color-dark);
   background-color: var(--color-white);
@@ -61,7 +61,7 @@ body {
 
 .section-title {
   font-family: $Exo2;
-  @include adaptive-value('font-size', 30, 25, 1);
+  @include adaptive-value('font-size', 30, 26, 1);
 }
 
 .btn {
