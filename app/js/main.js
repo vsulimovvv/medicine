@@ -1,46 +1,45 @@
 window.addEventListener('DOMContentLoaded', () => {
-  function carouselInstagram() {
-    // Initialise Carousel
-    const myCarousel = document.querySelector('.carousel');
-    if (myCarousel) {
-      const mainCarousel = new Carousel(myCarousel, {
-        infinite: false,
-        Navigation: false,
-        Dots: false,
-        center: true,
-      });
+  // function carouselInstagram() {
+  //   // Initialise Carousel
+  //   const myCarousel = document.querySelector('.carousel');
+  //   if (myCarousel) {
+  //     const mainCarousel = new Carousel(myCarousel, {
+  //       infinite: false,
+  //       Navigation: false,
+  //       Dots: false,
+  //       center: true,
+  //     });
 
-      // Initialise Fancybox
-      Fancybox.bind('[data-fancybox="instagram"]', {
-        Carousel: {
-          on: {
-            change: (carousel, to) => {
-              const $el = Fancybox.getInstance()
-                .getSlide()
-                .$trigger.closest('.carousel__slide');
+  //     // Initialise Fancybox
+  //     Fancybox.bind('[data-fancybox="instagram"]', {
+  //       Carousel: {
+  //         on: {
+  //           change: (carousel, to) => {
+  //             const $el = Fancybox.getInstance()
+  //               .getSlide()
+  //               .$trigger.closest('.carousel__slide');
 
-              const slide = mainCarousel.slides.find((slide) => {
-                return slide.$el === $el;
-              });
+  //             const slide = mainCarousel.slides.find((slide) => {
+  //               return slide.$el === $el;
+  //             });
 
-              mainCarousel.slideTo(slide.index, {
-                friction: 0,
-              });
-            },
-          },
-        },
-      });
-    }
-  }
-  carouselInstagram();
+  //             mainCarousel.slideTo(slide.index, {
+  //               friction: 0,
+  //             });
+  //           },
+  //         },
+  //       },
+  //     });
+  //   }
+  // }
+  // carouselInstagram();
 
-  (function rangeSliderSum() {
-    const rangeSlider = document.querySelector(
-      '.range-slider--sum .range-slider__range'
-    );
-    const sliderValue = document.querySelector(
+  function rangeSliderSum() {
+    const rangeSlider = document.querySelector('.range-slider__range');
+    const sliderValueSum = document.querySelector(
       '.range-slider--sum .range-slider__value'
     );
+
     if (rangeSlider) {
       noUiSlider.create(rangeSlider, {
         start: [50000],
@@ -57,17 +56,19 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       rangeSlider.noUiSlider.on('update', function (values, handle) {
-        if (handle) {
+        if (values) {
           sliderValueSum.innerHTML = values[handle];
         }
       });
     }
-  })();
+  }
+
+  rangeSliderSum();
   (function rangeSliderTime() {
     const rangeSlider = document.querySelector(
       '.range-slider--time .range-slider__range'
     );
-    const sliderValue = document.querySelector(
+    const sliderValueTime = document.querySelector(
       '.range-slider--time .range-slider__value'
     );
 
@@ -87,19 +88,21 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       rangeSlider.noUiSlider.on('update', function (values, handle) {
-        if (handle) {
-          sliderValueSum.innerHTML = values[handle];
+        if (values) {
+          sliderValueTime.innerHTML = values[handle];
         }
       });
     }
   })();
+
   (function rangeSliderPercent() {
     const rangeSlider = document.querySelector(
       '.range-slider--percent .range-slider__range'
     );
-    const sliderValue = document.querySelector(
+    const sliderValuePercent = document.querySelector(
       '.range-slider--percent .range-slider__value'
     );
+
     if (rangeSlider) {
       noUiSlider.create(rangeSlider, {
         start: [7],
@@ -116,8 +119,8 @@ window.addEventListener('DOMContentLoaded', () => {
       });
 
       rangeSlider.noUiSlider.on('update', function (values, handle) {
-        if (handle) {
-          sliderValueSum.innerHTML = values[handle];
+        if (values) {
+          sliderValuePercent.innerHTML = values[handle];
         }
       });
     }
@@ -259,12 +262,7 @@ window.addEventListener('DOMContentLoaded', () => {
   toggleAccordion('.accordion__control', '.accordion__content', '.accordion');
 
   // * ===== Toggle Tabs
-  function someTabs(
-    headerSelector,
-    tabSelector,
-    contentSelector,
-    activeClass
-  ) {
+  function someTabs(headerSelector, tabSelector, contentSelector, activeClass) {
     const header = document.querySelectorAll(headerSelector);
     const tab = document.querySelectorAll(tabSelector);
     const content = document.querySelectorAll(contentSelector);
@@ -312,57 +310,4 @@ window.addEventListener('DOMContentLoaded', () => {
     '.book-reviews__list',
     'book-reviews__btn--active'
   );
-
-  // function someTabsReviews(
-  //   headerSelector,
-  //   tabSelector,
-  //   contentSelector,
-  //   activeClass
-  // ) {
-  //   const header = document.querySelectorAll(headerSelector);
-  //   const tab = document.querySelectorAll(tabSelector);
-  //   const content = document.querySelectorAll(contentSelector);
-
-  //   if (header) {
-  //     hideTabContent();
-  //     showTabContent();
-
-  //     function hideTabContent() {
-  //       content.forEach((item) => {
-  //         item.classList.remove('active');
-  //       });
-  //       tab.forEach((item) => {
-  //         item.classList.remove(activeClass);
-  //       });
-  //     }
-
-  //     function showTabContent(i = 0) {
-  //       content[i].classList.add('active');
-  //       tab[i].classList.add(activeClass);
-  //     }
-
-  //     header.forEach((item) => {
-  //       if (item) {
-  //         item.addEventListener('click', (e) => {
-  //           const target = e.target;
-
-  //           if (target.classList.contains(tabSelector.replace(/\./, ''))) {
-  //             tab.forEach((item, i) => {
-  //               if (target == item || target.parentNode == item) {
-  //                 hideTabContent();
-  //                 showTabContent(i);
-  //               }
-  //             });
-  //           }
-  //         });
-  //       }
-  //     });
-  //   }
-  // }
-  // someTabsReviews(
-  //   '.book-reviews__tabs',
-  //   '.book-reviews__btn',
-  //   '.book-reviews__list',
-  //   'book-reviews__btn--active'
-  // );
 });
